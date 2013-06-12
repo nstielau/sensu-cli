@@ -20,6 +20,8 @@ module SensuCli
 
   class Config
     extend(Mixlib::Config)
+
+    formatter "print"
   end
 
 end
