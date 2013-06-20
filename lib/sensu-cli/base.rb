@@ -43,7 +43,7 @@ module SensuCli
       api = Api.new
       res = api.request(opts)
       msg = api.response(res.code, res.body, @api[:command])
-      res.code != '200' ? exit : Pretty.print(msg)
+      res.code != '200' ? exit : Pretty.send(Config.formatter, msg)
       Pretty.count(msg)
     end
 
